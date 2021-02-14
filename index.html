@@ -1,61 +1,256 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
     <title>Spotify</title>
   </head>
   <body>
     <div class="wrapper">
-        <main>
-            <div class="aside">
-                <div id="logo_aside">
-                    <img src="" alt="">
-                </div>
-                <div class="aside_menu">
 
-                </div>
-                <div class="aside_playlist">
-
-                </div>
-                <div class="aside_user">
-
-                </div>
+      <main>
+        <!-- NAV LATERALE -->
+        <nav class="main_nav">
+          <div class="main_nav_mobile">
+           <img src="img/logo.svg" alt="logo_mobile">
+          </div>
+          <div class="home_logo xs_hidden">
+            <a href="#"><img src="img/logo.svg" alt="logo_home"></a>
+          </div>
+          <section class="menu_function">
+            <ul>
+              <li>
+                <a href="#" id="home" class="active_left">
+                  <i class="fas fa-home"></i>
+                  <h5 class="xs_hidden">Home</h5>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-search"></i>
+                  <h5 class="xs_hidden">Cerca</h5>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-democrat"></i>
+                  <h5 class="xs_hidden">Your Library</h5>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <h2 class="xs_hidden">PLAYLIST</h2>
+          <a href="#" id="playlist" class="xs_hidden">
+            <i class="fas fa-plus-square"></i>
+            <h3>Crea Playlist</h3>
+          </a>
+          <section class="menu_playlist xs_hidden">
+            <ul>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+            </ul>
+          </section>
+          <section class="menu_account">
+            <div>
+              <i class="fas fa-arrow-circle-down"></i>
+              <h6 class="xs_hidden">installa App</h6>
             </div>
-            <div class="main_content">
-                <div class="content_menu">
-
-                </div>
-                <div class="recently_played">
-
-                </div>
-                <div class="created_for">
-
-                </div>
-                <div class="popular_artist">
-
-                </div>
-                <div class="overlay">
-
-                </div>
+            <hr class="xs_hidden">
+            <div>
+              <i class="fas fa-user-circle"></i>
+              <h5 class="xs_hidden">Matteo Migliori</h5>
             </div>
-        </main>
-        <footer>
-            <div class="nav_footer">
-                <div class="song_name">
+          </section>
+        </nav>
+        <!-- MENU CENTRALE + CONTENUTO -->
+        <section class="main_content">
+          <div class="overlay_subscribe">
+            <div>
+              <div id="subscribe">
+                <a href="#">ISCRIVITI</a>
+              </div>
 
-                </div>
-                <div class="media_player">
-
-                </div>
-                <div class="functions">
-
-                </div>
             </div>
-        </footer>
+          </div>
+          <div class="menu_main">
+            <ul>
+              <li class="active"><a href="#">IN EVIDENZA</a></li>
+              <li><a href="#">PODCAST</a></li>
+              <li><a href="#">CLASSIFICHE</a></li>
+              <li><a href="#">GENERI E MOOD</a></li>
+              <li><a href="#">NUOVE USCITE</a></li>
+              <li><a href="#">SCOPRI</a></li>
+            </ul>
+          </div>
+          <!-- ASCOLTATI DI RECENTE -->
+          <div class="wrapper_main">
+            <h2>Ascoltati di Recente</h2>
+            <div class="album">
+              <figure class="">
+                <div class="">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>title</figcaption>
+              </figure>
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitlte</figcaption>
+              </figure>
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption> title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+            </div>
+            <!-- CREATE FO USERS -->
+            <h2 class="title">Creati per Te</h2>
+            <p>Piu ascolti, piu saranno accurati i consigli</p>
+            <div class="album album_recent_play">
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover">
+                 <span class="overlay">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+            </div>
+            <!-- ARTISTI PIU POPOLARI -->
+            <h2 class="title">Artisti piu popolari</h2>
+            <p>Piu ascolti, piu saranno accurati i consigli</p>
+            <div class="album album_recent_play">
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover" class="circle_frame">
+                 <span class="overlay circle_frame">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+              <figure class="label_full">
+                <div class="label_album">
+                 <img src="" alt="album_cover" class="circle_frame">
+                 <span class="overlay circle_frame">
+                   <i class="far fa-play-circle"></i>
+                 </span>
+                </div>
+                <figcaption>title</figcaption>
+                <figcaption>subtitle</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </main>
+
+
+      <footer>
+        <div id="player">
+          <section id="current_play">
+            <img src="" alt="current play">
+            <div id="info_play">
+              <h5>title</h5>
+              <h6>title</h6>
+            </div>
+            <div id="elements_play">
+              <i class="far fa-heart"></i>
+              <i class="far fa-folder"></i>
+            </div>
+          </section>
+          <section id="central_player">
+            <div id="play_button">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="far fa-play-circle"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-redo"></i>
+            </div>
+            <span>0,45</span>
+            <div class="song_bar">
+              <div class="minute"></div>
+            </div>
+            <span>4,56</span>
+          </section>
+          <section id="utility_tool">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-tv"></i>
+            <i class="fas fa-volume-up"></i>
+            <div class="volume_bar">
+              <div class="volume"></div>
+            </div>
+          </section>
+        </div>
+      </footer>
     </div>
-
 
   </body>
 </html>

@@ -1,14 +1,557 @@
-*{
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-    background-color: #181e27;
 }
 
 .wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+}
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  height: calc(100% - 90px);
+}
+/* NAVIGATOR */
+.main_nav {
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* HOME LOGO */
+.main_nav .home_logo {
+  height: 100px;
+  line-height: 100px;
+}
+.main_nav img {
+  width: 150px;
+}
+.main_nav h5 {
+  display: inline-block;
+}
+/* MENU FUNCTION */
+.menu_function {
+  padding-bottom: 20px;
+}
+.menu_function li {
+  list-style: none;
+  color: grey;
+  padding: 5px 0px;
+}
+.menu_function i {
+  color: grey;
+  width: 30px;
+}
+.menu_function a {
+  color: grey;
+}
+.menu_function .fas.fa-home {
+  color: white;
+}
+.menu_function  #home{
+  color: white;
+  margin-left: -5px;
+}
+/* MENU PLAYLIST */
+.menu_playlist {
+  height: calc(100% - 80px);
+  overflow: auto;
+}
+.menu_playlist li {
+  list-style: none;
+  padding: 5px 0;
+}
+.main_nav h2 {
+ color: white;
+ font-size: 15px;
+}
+#playlist {
+  padding-top: 10px;
+}
+#playlist i {
+  font-size: 30px;
+  color: grey;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+#playlist h3 {
+  display: inline-block;
+  vertical-align: middle;
+  color: grey;
+  font-size: 15px;
+}
+.menu_playlist a {
+  color: grey;
+}
+/* MENU ACCOUNT */
+.menu_account {
+  height: 80px;
+}
+.menu_account h6, .menu_account h5 {
+  display: inline-block;
+}
+.menu_account h6 {
+  color: grey;
+}
+.menu_account h5 {
+  color: white;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.menu_account .fas.fa-arrow-circle-down {
+  color: grey;
+  display: inline-block;
+  font-size: 10px;
+}
+.menu_account .fas.fa-user-circle {
+  color: grey;
+  font-size: 30px;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+hr {
+  margin: 10px 0;
+}
+/* HOVER */
+.main_nav a:hover {
+  color: white;
+}
+.main_nav i:hover {
+  color: white;
+}
+
+/* MAIN */
+.overlay_subscribe {
+  width: calc(100% - 180px);
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: 1;
+  border-bottom: 1px solid black;
+}
+#subscribe {
+  border: 1px solid white;
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  border-radius: 50px;
+  transition: transform .2s;
+}
+#subscribe a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#subscribe:hover {
+  transform: scale(1.5);
+}
+
+/* MENU MAIN */
+.main_content {
+  width: 100%;
+  height: 100%;
+  background-color: #294258;
+  overflow-y: auto;
+}
+.menu_main ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 110px;
+}
+.menu_main ul li {
+  list-style: none;
+  padding-left: 20px;
+}
+.menu_main ul li a {
+  color: grey;
+}
+.menu_main ul li a:hover {
+  color: #1cd764;
+}
+/* ACTIVE */
+.active::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: lightgreen;
+  display: block;
+  position: relative;
+  left: 25%;
+}
+.active_left::before {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: lightgreen;
+  display: inline-block;
+  position: relative;
+  bottom: -5px;
+  left: -10px;
+}
+/* ASCOLTATI DI RECENTE */
+.main_content h2 {
+  color: white;
+  margin: 20px 0;
+}
+.wrapper_main {
+  width: 100%;
+  padding: 20px;
+}
+.album {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper_main img {
+  width: 100%
+}
+.album .label_album {
+  position: relative;
+}
+.label_full {
+ width: calc(100% / 6);
+ padding-right: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 98%;
+  display: none;
+}
+.overlay .far.fa-play-circle {
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.label_album:hover .overlay {
+  display: block;
+}
+figcaption {
+  text-align: center;
+  color: white;
+}
+figcaption:last-child {
+  color: grey;
+}
+/* CREATI PER TE */
+.album_recent_play {
+  justify-content: flex-start;
+}
+
+h2.title {
+  margin-bottom: 5px;
+}
+.main_content p {
+  color: grey;
+  margin-bottom: 20px;
+}
+/* ARTISTI PIU POPOLARI */
+.circle_frame {
+  border-radius: 100%;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 90px;
+  background-color: #282828;
+  z-index: 1;
+}
+#player {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+/* BRANO CORRENTE LEFT */
+#current_play {
+  height: 100%;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+#current_play img {
+  width: 20%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+#info_play {
+  width: 100px;
+}
+#info_play h5 {
+  color: white;
+  font-size: 100%;
+}
+#info_play h6 {
+  color: grey;
+  font-size: 100%;
+}
+#elements_play {
+  color: grey;
+}
+#elements_play i {
+  padding-left: 50%;
+  cursor: pointer;
+}
+/* CENTRAL PLAYER */
+#central_player {
+  width: calc(100% - 500px);
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+#play_button i{
+  padding-right: 20px;
+  color: white;
+  font-size: 150%;
+  cursor: pointer;
+}
+.song_bar {
+  width: 60%;
+  height: 6px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.minute {
+  width: 30%;
+  height: 100%;
+  background-color: white;
+}
+#central_player span {
+  display: inline-block;
+  color: white;
+  font-size: 15px;
+  padding: 0 2%;
+}
+/* RIGHT TOOL */
+#utility_tool {
+  height: 100%;
+  width: 250px;;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+}
+#utility_tool i {
+  padding-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+.volume_bar {
+  width: 80%;
+  height: 6px;
+  border: 1px solid grey;
+  border-radius: 20px;;
+}
+.volume {
+  width: 40%;
+  height: 100%;
+  background-color: grey;
+}
+#player i:hover {
+  color: #1cd764;
+}
+
+
+/* HIDDEN LG */
+.lg_hidden {
+  display: none;
+}
+
+/* MD */
+@media all and (max-width: 1199px) {
+
+  .label_full {
+   width: calc(100% / 4);
+  }
+  /* MENU ACCOUNT */
+  .menu_account h5 {
+    font-size: 16px;
+  }
+}
+/* MD */
+@media all and (max-width: 768px) {
+
+  /* ALBUM */
+  .album .label_album {
+
+  }
+  .label_full {
+   width: calc(100% / 4);
+  }
+  /* MENU PRINCIPALE CENTRALE */
+  .menu_main ul {
+    width: 90%;
+  }
+
+  /* MENU ACCOUNT */
+  .menu_account h5 {
+    font-size: 16px;
+  }
+
+  footer #player span {
+    font-size: 9px;
+  }
+  footer #player i {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+
+}
+
+/* S */
+@media all and (max-width: 767px) {
+
+  /* ALBUM */
+
+  .label_full {
+   width: calc(100% / 2);
+  }
+  #current_play {
+    width: 100px;
+    padding: 5px;
+  }
+  #current_play h5 {
+    font-size: 50%;
+  }
+  #current_play h6 {
+    font-size: 50%;
+  }
+  #central_player {
+    width: calc(100% - 200px);
+  }
+  #utility_tool {
+    width: 100px;
+    padding: 5px;
+  }
+  .menu_account h5 {
+    font-size: 15px;
+  }
+
+
+}
+@media all and (max-width: 541px) {
+  .menu_account h5 {
+    font-size: 11px;
+  }
+
+}
+
+/* XS */
+@media all and (max-width: 375px) {
+
+  /* MAIN NAV */
+  .main_nav {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .xs_hidden {
+    display: none;
+  }
+  .main_nav h4 {
+    display: none;
+  }
+  .main_nav h5 {
+    display: none;
+  }
+  .main_nav h6 {
+    display: none;
+  }
+  .menu_account .fas.fa-user-circle {
+    padding-right: 0px;
+  }
+  /* MIAN NAV MOBILE */
+  .lg_hidden {
+    display: block;
+  }
+  .main_nav_mobile img {
     width: 100%;
-    height: 100vh;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .main_nav_mobile i {
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  .main_nav_mobile .fas.fa-arrow-circle-down {
+    font-size: 10px;
+  }
+  .main_nav_mobile #bot {
+    align-self:
+  }
+ /* LABEL SECTION */
+  .label_full {
+  width: calc(100% / 2);
+ }
+ .menu_account {
+   margin-top: 380px;
+ }
+
+ /* FOOTER PLAYER */
+  #current_play {
+    width: 100px;
+    padding: 5px;
+  }
+  #current_play h5 {
+    font-size: 50%;
+  }
+  #current_play h6 {
+    font-size: 50%;
+  }
+  #central_player {
+    width: calc(100% - 200px);
+  }
+  #utility_tool {
+    width: 100px;
+    padding: 5px;
+  }
+  /* ACTIVE */
+  .active_left::before {
+   display: none;
+  }
+  .overlay_subscribe {
+    width: 90%;
+    height: 60px;
+  }
+  #subscribe {
+    width: 100px;
+    height: 25px;
+    right: 10%;
+    top: 35%;
+  }
+  .menu_main ul {
+    padding-top: 65px;
+  }
 }
