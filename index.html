@@ -1,256 +1,262 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
-    <meta charset="utf-8">
     <title>Spotify</title>
-  </head>
-  <body>
-    <div class="wrapper">
+</head>
+<body>
 
-      <main>
-        <!-- NAV LATERALE -->
-        <nav class="main_nav">
-          <div class="main_nav_mobile">
-           <img src="img/logo.svg" alt="logo_mobile">
+  <div class="wrapper">
+
+    <!-- top bar layover -->
+    <div class="layover-top"></div>
+    <a class="upgrade" href="">effettua l'upgrade</a>
+
+<!-- inizio main -->
+    <main>
+      <!-- inizio main aside -->
+      <section class="main-nav">
+        <div class="top-nav">
+          <div id="logo-nav-smartphone">
+            <a href="#"><img src="img/logo-small.svg" alt=""></a>
           </div>
-          <div class="home_logo xs_hidden">
-            <a href="#"><img src="img/logo.svg" alt="logo_home"></a>
+
+          <div id="logo">
+            <a href="#"><img src="img/logo.svg" alt=""></a>
           </div>
-          <section class="menu_function">
+
+          <div class="menu-nav">
             <ul>
-              <li>
-                <a href="#" id="home" class="active_left">
-                  <i class="fas fa-home"></i>
-                  <h5 class="xs_hidden">Home</h5>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fas fa-search"></i>
-                  <h5 class="xs_hidden">Cerca</h5>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fas fa-democrat"></i>
-                  <h5 class="xs_hidden">Your Library</h5>
-                </a>
-              </li>
+              <li><a href="#"><img src="img/home.svg" alt="">Home</a></li>
+              <li><a href=""><img src="img/search.svg" alt="Search"><span>Cerca</span></a></li>
+              <li><a href=""><img src="img/libreria.svg" alt="Libreria"><span>La tua libreria</span></a></li>
             </ul>
-          </section>
-          <h2 class="xs_hidden">PLAYLIST</h2>
-          <a href="#" id="playlist" class="xs_hidden">
-            <i class="fas fa-plus-square"></i>
-            <h3>Crea Playlist</h3>
-          </a>
-          <section class="menu_playlist xs_hidden">
+          </div>
+
+          <div class="playlist">
+            <h3>playlist</h3>
+            <a href="#">Crea playlist</a>
             <ul>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
+              <li> <a href="#">Nome playlist</a> </li>
+              <li> <a href="#">Nome playlist</a> </li>
+              <li> <a href="#">Nome playlist</a> </li>
+              <li> <a href="#">Nome playlist</a> </li>
+              <li> <a href="#">Nome playlist</a> </li>
+              <li> <a href="#">Nome playlist</a> </li>
+              <li> <a href="#">Nome playlist</a> </li>
             </ul>
-          </section>
-          <section class="menu_account">
-            <div>
-              <i class="fas fa-arrow-circle-down"></i>
-              <h6 class="xs_hidden">installa App</h6>
+          </div>
+
+          <div class="user">
+            <div class="install">
+              <a href="#">installa app</a>
             </div>
-            <hr class="xs_hidden">
-            <div>
-              <i class="fas fa-user-circle"></i>
-              <h5 class="xs_hidden">Matteo Migliori</h5>
-            </div>
-          </section>
-        </nav>
-        <!-- MENU CENTRALE + CONTENUTO -->
-        <section class="main_content">
-          <div class="overlay_subscribe">
-            <div>
-              <div id="subscribe">
-                <a href="#">ISCRIVITI</a>
+
+            <div class="profile">
+              <div class="img-profile">
+                <img src="" alt="">
               </div>
-
+              <h3>Migliori Matteo</h3>
             </div>
           </div>
-          <div class="menu_main">
-            <ul>
-              <li class="active"><a href="#">IN EVIDENZA</a></li>
-              <li><a href="#">PODCAST</a></li>
-              <li><a href="#">CLASSIFICHE</a></li>
-              <li><a href="#">GENERI E MOOD</a></li>
-              <li><a href="#">NUOVE USCITE</a></li>
-              <li><a href="#">SCOPRI</a></li>
-            </ul>
-          </div>
-          <!-- ASCOLTATI DI RECENTE -->
-          <div class="wrapper_main">
-            <h2>Ascoltati di Recente</h2>
-            <div class="album">
-              <figure class="">
-                <div class="">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>title</figcaption>
-              </figure>
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitlte</figcaption>
-              </figure>
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption> title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-            </div>
-            <!-- CREATE FO USERS -->
-            <h2 class="title">Creati per Te</h2>
-            <p>Piu ascolti, piu saranno accurati i consigli</p>
-            <div class="album album_recent_play">
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover">
-                 <span class="overlay">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-            </div>
-            <!-- ARTISTI PIU POPOLARI -->
-            <h2 class="title">Artisti piu popolari</h2>
-            <p>Piu ascolti, piu saranno accurati i consigli</p>
-            <div class="album album_recent_play">
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover" class="circle_frame">
-                 <span class="overlay circle_frame">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-              <figure class="label_full">
-                <div class="label_album">
-                 <img src="" alt="album_cover" class="circle_frame">
-                 <span class="overlay circle_frame">
-                   <i class="far fa-play-circle"></i>
-                 </span>
-                </div>
-                <figcaption>title</figcaption>
-                <figcaption>subtitle</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-      </main>
-
-
-      <footer>
-        <div id="player">
-          <section id="current_play">
-            <img src="" alt="current play">
-            <div id="info_play">
-              <h5>title</h5>
-              <h6>title</h6>
-            </div>
-            <div id="elements_play">
-              <i class="far fa-heart"></i>
-              <i class="far fa-folder"></i>
-            </div>
-          </section>
-          <section id="central_player">
-            <div id="play_button">
-              <i class="fas fa-random"></i>
-              <i class="fas fa-step-backward"></i>
-              <i class="far fa-play-circle"></i>
-              <i class="fas fa-step-forward"></i>
-              <i class="fas fa-redo"></i>
-            </div>
-            <span>0,45</span>
-            <div class="song_bar">
-              <div class="minute"></div>
-            </div>
-            <span>4,56</span>
-          </section>
-          <section id="utility_tool">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-volume-up"></i>
-            <div class="volume_bar">
-              <div class="volume"></div>
-            </div>
-          </section>
         </div>
-      </footer>
-    </div>
+      </section>
+<!-- fine section main aside -->
 
-  </body>
-</html>
+
+
+      <section class="main-content">
+        <div class="main-menu">
+          <div class="icon-menu">
+            <a href="#">in evidenza</a>
+          </div>
+
+          <div class="icon-menu">
+            <a href="#">podcast</a>
+          </div>
+
+          <div class="icon-menu">
+            <a href="#">classifiche</a>
+          </div>
+
+          <div class="icon-menu">
+            <a href="#">generi e mood</a>
+          </div>
+
+          <div class="icon-menu">
+            <a href="#">nuove uscite</a>
+          </div>
+
+          <div class="icon-menu">
+            <a href="#">scopri</a>
+          </div>
+        </div>
+
+<!-- ascoltati di recente  -->
+        <div id="last">
+          <h1>Last played</h1>
+          <div class="main-album">
+            <div class="album">
+              <div class="album-img">
+                <div class="layover">
+                  <img src="" alt="">
+                </div>
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover">
+                  <img src="" alt="">
+                </div>
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover">
+                  <img src="" alt="">
+                </div>
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover">
+                  <img src="" alt="">
+                </div>
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover">
+                  <img src="" alt="">
+                </div>
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover">
+                  <img src="" alt="">
+                </div>
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- scelti per te -->
+        <div id="for-you">
+          <h1>Creato per Migliori Matteo</h1>
+          <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+          <div class="main-album">
+            <div class="album">
+              <div class="album-img">
+                <div class="layover"></div>
+                  <img src="" alt="">
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover"></div>
+                  <img src="" alt="">
+                <h3>Release Data</h3>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover"></div>
+                  <img src="" alt="">
+              </div>
+              <h3>Daily mix</h3>
+            </div>
+          </div>
+        </div>
+<!-- artisti popolari -->
+        <div id="popular-artist">
+
+          <h1>Creato per Migliori Matteo</h1>
+          <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+          <div class="main-album">
+            <div class="album">
+              <div class="album-img">
+                <div class="layover"></div>
+                  <img src="" alt="">
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-img">
+                <div class="layover"></div>
+                  <img src="" alt="">
+                <h5>Heavy metal</h5>
+                <span>subtitle</span>
+              </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- fine main -->
+
+    <footer>
+      <!-- footer left -->
+      <section class="footer-nav">
+        <div class="track">
+          <div class="track-icon">
+            <img src="" alt="">
+          </div>
+          <div class="track-info">
+            <h5>Sinister</h5>
+            <p>Nome brano</p>
+          </div>
+
+          <div class="track-font">
+            <i>icona 1</i>
+            <i>icona 2</i>
+          </div>
+        </div>
+
+        <!-- footer player -->
+        <div class="mixtape">
+
+
+        </div>
+
+        <div class="mixtape-player">
+
+        </div>
+
+        <div class="mixtape-audio">
+
+        </div>
+
+
+      </section>
+
+    </footer>
+
+  </div>
