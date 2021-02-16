@@ -315,6 +315,7 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+/* canzone */
 
 .song-name {
     display: flex;
@@ -356,6 +357,7 @@ footer {
     padding: 5px;
 }
 
+/* sezione centrale */
 .media-player {
     display: flex;
     flex-direction: column;
