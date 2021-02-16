@@ -17,7 +17,7 @@ a {
 }
 
 
-/* FINE GENERAL */
+
 
 main {
     height: calc(100% - 80px);
@@ -28,7 +28,7 @@ main {
     background-color: #141922;
 }
 
-/* barra superiore */
+
 
 .layover-fixed-top {
     width: 100%;
@@ -55,7 +55,7 @@ main {
     transform: scale(1.1);
 }
 
-/* MENU NAVIGATORE DI SINISTRA */
+
 .main-nav a {
     color: #969494;
     font-weight: bold;
@@ -75,7 +75,7 @@ main {
     min-height: 390px;
 }
 
-/* LOGO SMART PER RESPONSIVE */
+
 #logo-xs {
     display: none;
     width: 40px;
@@ -83,7 +83,7 @@ main {
     padding-top: 10px;
 }
 
-/* PARTE LOGO E MENU SUPERIORE */
+
 #logo {
     width: 160px;
     height: 80px;
@@ -184,7 +184,7 @@ main {
     width: 100%;
 }
 
-/* CONTENUTO DEL MAIN */
+
 .main-content {
     float: left;
     width: calc(100% - 220px);
@@ -284,7 +284,7 @@ main {
     padding: 10px 0;
 }
 
-/* FOOTER */
+
 footer {
     background-color: #282828;
     height: 80px;
